@@ -1,0 +1,68 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Contactos realizados {% endblock %}
+
+{% block content %}
+<header class="bg-white py-8 relative">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div
+            class="bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] w-full h-full absolute inset-0 mx-auto py-32 sm:py-48 lg:py-56">
+        </div>
+    </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold text-center tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">PCForge</h1>
+        <p class="text-lg mt-4 text-center leading-7 text-gray-600 sm:text-lg lg:text-xl">Creamos PCs a medida para tus
+            necesidades</p>
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true">
+        <div
+            class="bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] w-full h-full absolute inset-0 mx-auto py-32 sm:py-48 lg:py-56">
+        </div>
+    </div>
+</header>
+
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl text-center">¿Cansado de buscar un PC que se ajuste a tu presupuesto?</h2>
+        <p class="text-lg mt-4 text-center leading-7 text-gray-600 sm:text-lg lg:text-xl">En PCForge lo hacemos por ti!</p>
+    </section>
+
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl text-center">¿Cómo funciona?</h2>
+        <ol class="list-disc mt-4 text-lg leading-7 text-gray-600 sm:text-lg lg:text-xl mx-auto max-w-2xl space-y-2">
+            <li>Elige el uso que le darás a tu PC: ofimatica, gaming, edicion, etc.</li>
+            <li>Selecciona el rendimiento y presupuesto que se ajusta más a tus necesidades.</li>
+            <li>Nosotros nos encargamos del resto: buscamos los componentes, verificamos su compatibilidad y configuramos tu PC.</li>
+            <li>¡Y listo! ya tendrías una configuración preparada para usar</li>
+        </ol>
+    </section>
+
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl text-center">¿Por qué elegirnos?</h2>
+        <ul class="list-disc mt-4 text-lg leading-7 text-gray-600 sm:text-lg lg:text-xl mx-auto max-w-2xl space-y-2">
+            <li>Ahorra tiempo: No te preocupes por buscar y comparar componentes. Nosotros lo hacemos por ti.</li>
+            <li>Componentes de calidad: Seleccionamos solo los mejores componentes del mercado para garantizar el
+                rendimiento y la durabilidad de tu PC.</li>
+            <li>Algoritmo de creación a tu disposición: Nuestro equipo de expertos ha creado un algoritmo encargado de elegir los componentes que mejor se
+                adapten a tus necesidades y ocmprobar su compatibilidad para que no te tengas que preocupar por nada.</li>
+            <li>Garantía de satisfacción: Estamos seguros de que te encantará tu nuevo PC.</li>
+        </ul>
+    </section>
+
+    <section class="mb-12 text-center">
+        <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-4xl">¡No esperes más! Crea tu PC de forma  gratuita hoy mismo.</h2>
+        <a href="{% url 'ensamblador' %}"
+            class="bg-indigo-600 text-white mt-6 py-2 px-4 rounded-md shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 inline-block">Crear PC
+        </a>
+    </section>
+</main>
+
+
+
+
+{% endblock %}
+{% block script %}
+<script src="{% static 'js/incidencias.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} Panel Control {% endblock %}
+
+{% block content %}
+<div class="mx-auto ">
+    <header class="bg-gray-200 shadow">
+        <div class="px-4 py-6 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Estadisticas generales</h1>
+        </div>
+    </header>
+
+    <div id="estadisticas-generales" class="p-10">
+
+    </div>
+    
+
+    <header class="bg-gray-200 shadow">
+        <div class="px-4 py-6 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Gráficos</h1>
+        </div>
+    </header>
+    <div class="p-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!--Uso -->
+            <div class="w-full p-8 bg-white rounded-lg shadow-md border border-gray-300">
+                <h2 class="text-xl font-bold mb-4">Porcentajes de uso PCs</h2>
+                <div id="grafico1" class="space-y-2"></div>
+            </div>
+            <!-- Especificaciones -->
+            <div class="w-full p-8 bg-white rounded-lg shadow-md border border-gray-300">
+                <h2 class="text-xl font-bold mb-4">Porcentajes de rendimiento PCs</h2>
+                <div id="grafico2" class="space-y-2"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <header class="bg-gray-200 shadow">
+        <div class="px-4 py-6 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Funcionalidades</h1>
+        </div>
+    </header>
+    <div class="p-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <!-- Web Scraping -->
+            <div class="bg-white rounded-lg border border-gray-300 p-6 shadow-md text-center">
+                <div class="mb-6">
+                    <div class="text-2xl font-bold">Web Scraping</div>
+                    <div class="mt-1">
+                        <p class="text-gray-600">Extracción de datos de sitios web.</p>
+                    </div>
+                </div>
+                <button id="webScrapingButton"
+                    class="petapi rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Ejecutar Web Scraping
+                </button>
+            </div>
+
+            <!-- Actualización de Datos en la BD -->
+            <div class="bg-white rounded-lg border border-gray-300 p-6 shadow-md text-center">
+                <div class="mb-6">
+                    <div class="text-2xl font-bold">Actualización de Datos en la BD</div>
+                    <div class="mt-1">
+                        <p class="text-gray-600">Actualizar la base de datos con información reciente.</p>
+                    </div>
+                </div>
+                <button id="actualizarBDButton"
+                    class="petapi rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Actualizar Datos en la BD
+                </button>
+            </div>
+
+            <!-- Creación de PCs Pre-ensamblados -->
+            <div class="bg-white rounded-lg border border-gray-300 p-6 shadow-md text-center">
+                <div class="mb-6">
+                    <div class="text-2xl font-bold">Creación de PCs</div>
+                    <div class="mt-1">
+                        <p class="text-gray-600">Ensamblaje de computadoras preconfiguradas.</p>
+                    </div>
+                </div>
+                <button id="crearPCsButton"
+                    class="petapi rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    Crear PCs Pre-ensamblados
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/panelControl.js' %}"></script>
+{% endblock %}

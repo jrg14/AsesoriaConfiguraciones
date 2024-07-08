@@ -1,0 +1,10 @@
+Django
+beautifulsoup4
+requests
+cloudscraper
+psycopg2-binary
+django-environ
+django-ninja
+pytest 
+pytest-django
+gunicorn
